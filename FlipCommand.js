@@ -1,10 +1,3 @@
-const BaseCommand = require('../../utils/structures/BaseCommand');
-
-module.exports = class FlipCommand extends BaseCommand {
-  constructor() {
-    super('flip', 'rand', []);
-  }
-
   run(client, message, args) {
     let get_random = function (list) {
       return list[Math.floor((Math.random() * list.length))];
@@ -22,4 +15,3 @@ module.exports = class FlipCommand extends BaseCommand {
       message.channel.send(emb2)
     }, 20);
   }
-}
